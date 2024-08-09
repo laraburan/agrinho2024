@@ -1,0 +1,118 @@
+:root {
+    --primary-color: #bc2e6c;
+    --secondary-color: #fff;
+    --font-family:"Gupter", serif;
+
+    --font-size: 40px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--secondary-color);
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+}
+
+.highlight {
+    margin-bottom: 2rem;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.title-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: var(--secondary-color);
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.accordion {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+    display: block;
+}
+
+.accordion:hover {
+    background-color: #45a049;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.panel {
+    padding: 0 1rem;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+}
+
+input[type="checkbox"]:checked + .accordion + .panel {
+    display: block;
+}
+
+.panel img {
+    width: 100%;
+    height: auto;
+}
+
+.panel h2 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.panel h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.panel p {
+    margin: 0.5rem 0;
+}
+
+@media (min-width: 768px) {
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .content-item {
+        width: 48%;
+        margin-bottom: 1rem;
+    }
+}
